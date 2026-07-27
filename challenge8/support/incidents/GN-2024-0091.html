@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Incident GN-2024-0091 — RootJ Technologies</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html"><img src="../../assets/img/logo.png" alt="RootJ logo">RootJ Technologies</a>
+  <nav class="main-nav"><a href="../../index.html">Home</a>
+<a href="../../about.html">About</a>
+<a href="../../team.html">Team</a>
+<a href="../../products.html">Products</a>
+<a href="../../blog.html">Blog</a>
+<a href="../../careers.html">Careers</a>
+<a href="../../press.html">Press</a>
+<a href="../../support.html">Support</a>
+<a href="../../contact.html">Contact</a></nav>
+</header>
+
+<main>
+<div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../support.html">Support</a> / <a href="../incidents.html">Incidents</a> /</div>
+
+<h1>Incident GN-2024-0091</h1>
+<p class="byline">Filed January 2024 &middot; Status: Resolved &middot; Severity: SEV-2</p>
+<p><strong>Summary:</strong> An internal audit identified a legacy FTP
+service (see <a href="../status.html">platform status</a>) that had been
+left in place after a 2019 migration and was decommissioned as part of
+this incident's remediation.</p>
+<p><strong>Impact:</strong> No customer-facing systems were affected.
+The service in question was used only for internal file transfer between
+two legacy build machines.</p>
+<p><strong>Root cause:</strong> The FTP service was missed during the
+2019 decommissioning sweep and remained reachable from the internal
+network for longer than intended.</p>
+<p><strong>Remediation:</strong></p>
+<ul>
+<li>Legacy FTP service decommissioned January 19, 2024.</li>
+<li>Internal network scan performed to confirm no other legacy services remained.</li>
+<li>Credential rotation performed for all accounts with access to the affected host.</li>
+</ul>
+<p><strong>Timeline:</strong> Detected 2024-01-14, contained 2024-01-15,
+remediated 2024-01-19, postmortem published 2024-01-26.</p>
+<p>This report has been reviewed and redacted for public posting in line
+with our <a href="../../about/mission.html">transparency policy</a>.</p>
+
+<!--
+internal-only — do not publish externally, staging build leaked this comment, remove before prod deploy
+
+# Extracted from compromised auth database (users table, password_hash column)
+# incident_ref: GN-2024-0091
+
+admin:5f4dcc3b5aa765d61d8327deb882cf99
+mkendrick:4ca7c5c27c2314eecc71f67501abb724
+svc_backup:098f6bcd4621d373cade4e832627b4f6
+-->
+
+</main>
+<footer class="site-footer">
+  &copy; 2024 RootJ Technologies Inc. · Internal company site (staging) · incident tracker ref GN-2024
+</footer>
+</body>
+</html>

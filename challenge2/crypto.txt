@@ -1,0 +1,152 @@
+████████████████████████████████████████████████████████████████████████████████████
+█                                                                              █
+█                  NATIONAL CYBER THREAT INVESTIGATION BUREAU                  █
+█                                                                              █
+████████████████████████████████████████████████████████████████████████████████████
+
+CLASSIFICATION      : CONFIDENTIAL
+CASE NUMBER         : NCTIB-26-8842
+INCIDENT TYPE       : Suspicious Network Communication
+SEVERITY            : MEDIUM
+ANALYST             : REDACTED
+STATUS              : UNDER INVESTIGATION
+
+================================================================================
+
+EXECUTIVE SUMMARY
+
+At approximately 18:47 UTC on 26 July 2026, network monitoring systems detected
+an outbound communication originating from an unidentified endpoint connected to
+one of our monitored infrastructure segments. The communication lasted less than
+two seconds before the source disconnected from the network and became
+unreachable.
+
+Although the transmission itself was extremely small, its behavior attracted
+attention due to several unusual characteristics. The originating device had no
+prior communication history, no associated asset inventory, and no known user
+identity. Automated threat intelligence systems were unable to associate the
+endpoint with any existing malware family, penetration testing framework, or
+recognized command-and-control infrastructure.
+
+No executable content was detected within the transmission. Static analysis
+identified only printable ASCII characters with no binary payload, archive
+format, or embedded metadata. The communication appears intentionally crafted to
+be human-readable while simultaneously concealing its original meaning.
+
+================================================================================
+
+FORENSIC ACQUISITION
+
+Collection Method        : Passive Network Monitoring
+Capture Integrity        : Verified
+SHA-256 Verification     : Successful
+Packet Loss              : None
+Payload Corruption       : Not Detected
+Timestamp Accuracy       : ±1 ms
+Chain of Custody         : Verified
+
+The original capture has been preserved for future examination. Analysts are
+working only from verified forensic copies to ensure the integrity of the
+evidence remains intact throughout the investigation.
+
+================================================================================
+
+AUTOMATED ANALYSIS
+
+The following automated procedures have already been completed:
+
+[✓] Malware Signature Scan
+[✓] Static Content Inspection
+[✓] Character Encoding Detection
+[✓] Compression Detection
+[✓] Archive Identification
+[✓] Entropy Measurement
+[✓] Binary Payload Inspection
+[✓] Embedded Script Detection
+[✓] Unicode Normalization
+[✓] File Carving
+
+Results indicate no malicious executable content. The intercepted message
+contains only textual data that appears to have undergone some form of
+intentional transformation prior to transmission.
+
+================================================================================
+
+ANALYST OBSERVATIONS
+
+The message is relatively short, yet demonstrates a consistent structure
+throughout. Word boundaries have been preserved, punctuation remains unchanged,
+and there is no indication that characters were inserted or removed during the
+transformation process.
+
+Several analysts noted recurring character groups that may represent repeated
+words or commonly occurring terms. While automated tools produced no conclusive
+results, the consistency of these repeating patterns suggests that the message
+was generated using a predictable process rather than random substitution.
+
+At this stage of the investigation, no assumptions should be made regarding the
+method used. Investigators are encouraged to examine the evidence carefully,
+consider multiple possibilities, and avoid relying solely on automated decoding
+tools.
+
+================================================================================
+
+FIELD REPORT
+
+Senior investigators believe the sender intended the communication to be
+recoverable only by someone familiar with common information-hiding techniques.
+Whether this was intended as an operational message, a proof of concept, or
+simply a test remains unknown.
+
+Previous investigations have demonstrated that seemingly insignificant messages
+often contain the most valuable intelligence. Every character should therefore
+be considered part of the evidence unless proven otherwise.
+
+Do not assume the first interpretation is correct. Verify every conclusion
+before proceeding to the next stage of the investigation.
+
+================================================================================
+
+CHAIN OF EVENTS
+
+18:46:58  Unknown endpoint connected.
+18:47:01  Initial handshake observed.
+18:47:03  Outbound transmission detected.
+18:47:04  Transmission successfully captured.
+18:47:05  Endpoint disconnected.
+18:47:07  Automated analysis initiated.
+18:47:13  Human analyst assigned.
+18:47:29  Manual review recommended.
+18:48:11  Investigation remains open.
+
+================================================================================
+
+RECOVERED TRANSMISSION
+
+wkh iodj lv iodj{fdhvdu_flskhuv_duh_hdvb}
+
+================================================================================
+
+MISSION OBJECTIVES
+
+1. Examine the intercepted transmission.
+2. Determine how the message was transformed.
+3. Recover the original readable message.
+4. Identify the flag contained within the recovered text.
+5. Submit the flag exactly as recovered.
+
+================================================================================
+
+FINAL REMARKS
+
+This investigation is intended to evaluate an analyst's ability to recognize
+patterns, test hypotheses, and reason through unfamiliar situations. The
+necessary information is contained entirely within the recovered transmission.
+No external systems require exploitation, and no additional files are needed to
+complete the investigation.
+
+Accuracy is more important than speed.
+
+Good luck, Investigator.
+
+================================================================================

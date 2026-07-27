@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Incident GN-2023-0044 — RootJ Technologies</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../../index.html"><img src="../../assets/img/logo.png" alt="RootJ logo">RootJ Technologies</a>
+  <nav class="main-nav"><a href="../../index.html">Home</a>
+<a href="../../about.html">About</a>
+<a href="../../team.html">Team</a>
+<a href="../../products.html">Products</a>
+<a href="../../blog.html">Blog</a>
+<a href="../../careers.html">Careers</a>
+<a href="../../press.html">Press</a>
+<a href="../../support.html">Support</a>
+<a href="../../contact.html">Contact</a></nav>
+</header>
+
+<main>
+<div class="breadcrumb"><a href="../../index.html">Home</a> / <a href="../../support.html">Support</a> / <a href="../incidents.html">Incidents</a> /</div>
+
+<h1>Incident GN-2023-0044</h1>
+<p class="byline">Filed September 2023 &middot; Status: Resolved</p>
+<p><strong>Summary:</strong> A misconfigured retry policy in the RootAPI
+gateway caused a burst of duplicate webhook deliveries to two partner
+integrations over a 40-minute window.</p>
+<p><strong>Impact:</strong> No data loss. Affected partners were notified
+and duplicate events were deduplicated on replay.</p>
+<p><strong>Root cause:</strong> A deployment removed an idempotency key
+check that had not been covered by integration tests.</p>
+<p><strong>Follow-up:</strong> Idempotency checks are now part of the
+standard pre-deploy checklist.</p>
+
+</main>
+<footer class="site-footer">
+  &copy; 2024 RootJ Technologies Inc. · Internal company site (staging) · incident tracker ref GN-2024
+</footer>
+</body>
+</html>

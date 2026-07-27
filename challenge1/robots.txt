@@ -1,0 +1,24 @@
+# robots.txt
+# RootJ Logistics
+# Last Updated: 26 July 2026
+
+User-agent: *
+Disallow: /admin/
+Disallow: /admin-backup/
+Disallow: /old-site/
+Disallow: /dev/
+Disallow: /backup/
+Disallow: /test/
+Disallow: /staging/
+Disallow: /private-page.html
+Disallow: /secret-page-8842.html
+Disallow: /robots-secret-page.html
+
+# Internal note:
+# Remember to remove old QA pages before the security audit.
+
+# Search engine crawl delay
+Crawl-delay: 5
+
+# Sitemap
+Sitemap: /sitemap.xml
